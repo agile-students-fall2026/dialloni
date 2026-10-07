@@ -77,6 +77,16 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+app.get('/about', (req,res) =>{
+  res.json({
+    Name: "Abubakar Diallo",
+    paragraphs: [
+      'My name is Abubakar Diallo and I am a rising senior at NYU majoring in Computer Science.',
+      'I am taking both the Agile Web Development and the Software Engineering course this semester.', 'I am on a study away program in NYU-TULSA in Tulsa, Oklahoma this semester.',
+    ],
+    imageUrl: 'https://github.com/Dialloni.png?raw=true',
+  })
+})
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
